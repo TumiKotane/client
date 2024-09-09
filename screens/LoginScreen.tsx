@@ -21,14 +21,43 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
 
-  const handleLogin = async () => {
+//   const handleLogin = async () => {
+//     try {
+//       const response = await axios.post('http://192.168.137.226:5000/login', { //192.168.137.1
+//         email,
+//         password,
+//       });
+//       console.log('Server response:', response.data); // Log the response
+//       if (response.data.token) {
+//         await AsyncStorage.setItem('token', response.data.token);
+//         console.log('Login successful');
+//         navigation.navigate('Dashboard');
+//         console.log('Navigated to Dashboard screen');
+//       } else {
+//         Alert.alert('Login failed', 'Invalid email or password');
+//       }
+//     } catch (error) {
+//       console.log(error);
+//       Alert.alert('Login failed', 'An error occurred');
+//     }
+//   };
+const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/login', { //192.168.137.1
+      const response = await axios.post('http://192.168.137.226:5000/login', {
         email,
         password,
       });
-      if (response.data.token) {
-        await AsyncStorage.setItem('token', response.data.token);
+      
+      console.log('Server response:', response.data);
+  
+      // Check if uuid or email exists to verify a successful login
+      if (response.data.uuid || response.data.email) {
+        // Optionally, store other user info like email, name, role
+        await AsyncStorage.setItem('userEmail', response.data.email);
+        await AsyncStorage.setItem('userName', response.data.name);
+        await AsyncStorage.setItem('userRole', response.data.role);
+        await AsyncStorage.setItem('userUUID', response.data.uuid);
+  
         console.log('Login successful');
         navigation.navigate('Dashboard');
         console.log('Navigated to Dashboard screen');
