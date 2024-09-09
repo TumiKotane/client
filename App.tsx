@@ -25,7 +25,7 @@ export default function App(): JSX.Element {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Login">
           <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="AddUser" component={} />
+         {/* <Stack.Screen name="AddUser" component={} /> */}
           <Stack.Screen name="Dashboard" component={Dashboard} />
         </Stack.Navigator>
       </NavigationContainer>

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { Alert } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux'; // Redux
+//import { useDispatch, useSelector } from 'react-redux'; // Redux
 import { useNavigation, NavigationProp } from '@react-navigation/native'; // React Navigation for navigation
-import { getMe } from '../redux/authSlice'; // Import your Redux slice
-import Layout from '../components/Layout'; // Assuming you have a Layout component
-import FormAddUser from '../components/FormAddUser'; // Form component to add a user
-import { RootState } from '../redux/store'; // Import RootState type from your Redux store
+// import { getMe } from '../redux/authSlice'; // Import your Redux slice
+// import Layout from '../components/Layout'; // Assuming you have a Layout component
+// import FormAddUser from '../components/FormAddUser'; // Form component to add a user
+// import { RootState } from '../redux/store'; // Import RootState type from your Redux store
 
 const AddUser: React.FC = () => {
   const dispatch = useDispatch();

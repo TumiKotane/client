@@ -35,7 +35,7 @@ const Dashboard: React.FC = () => {
     <View style={styles.container}>
    
         <>
-          <Text style={styles.title}>Welcome, !</Text>
+          <Text style={styles.title}>Welcome!</Text>
           <Text style={styles.subtitle}>Role: </Text>
           <Button
             title="Go to Add User"
