@@ -37,11 +37,11 @@ const Dashboard: React.FC = () => {
         <>
           <Text style={styles.title}>Welcome!</Text>
           <Text style={styles.subtitle}>Role: </Text>
-          <Button
+          {/* <Button
             title="Go to Add User"
             onPress={() => navigation.navigate('AddUser')}
             color="#4CAF50"
-          />
+          /> */}
         </>
         <Text style={styles.title}>Loading...</Text>
     

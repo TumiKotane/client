@@ -2,8 +2,8 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { IoPerson, IoPricetag, IoHome, IoLogOut } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../store"; // Adjust the import path according to your project structure
-import { LogOut, reset } from "../features/authSlice";
+import { RootState } from "../redux/store"; // Adjust the import path according to your project structure
+import { LogOut, reset } from "../redux/authSlice";
 
 // Define types for the user and auth state
 interface User {

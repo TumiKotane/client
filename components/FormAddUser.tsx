@@ -1,6 +1,7 @@
 import React, { useState, FormEvent } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 // Define the functional component with React.FC type
 const FormAddUser: React.FC = () => {
@@ -93,9 +94,17 @@ const FormAddUser: React.FC = () => {
                 <label className="label">Role</label>
                 <div className="control">
                   <div className="select is-fullwidth">
+                  {/* <select
+                      value={role}
+                      onChange={(e) => setRole(e.target.value)}
+                    >
+                      <option value="admin">Admin</option>
+                      <option value="user">User</option>
+                    </select> */}
                     <select
                       value={role}
                       onChange={(e) => setRole(e.target.value)}
+                      title="Role"
                     >
                       <option value="admin">Admin</option>
                       <option value="user">User</option>

@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './screens/LoginScreen';
 import Dashboard from './screens/Dashboard';
 import AddUser from './screens/AddUser';
+//import AddProduct from './screens/AddProductScreen';
 
 // import AddUser from './screens/AddUser';
 //import Dashboard from './screens/Dashboard';
@@ -26,10 +27,10 @@ export default function App(): JSX.Element {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Login">
           <Stack.Screen name="Login" component={LoginScreen} />
-         <Stack.Screen name="AddUser" component={AddUser} />
+         {/* <Stack.Screen name="AddUser" component={AddUser} /> */}
           <Stack.Screen name="Dashboard" component={Dashboard} />
-          <Stack.Screen name="Product" component={ProductScreen} />
-          <Stack.Screen name="AddProduct" component={AddProductScreen} />
+          {/* <Stack.Screen name="Product" component={ProductScreen} />
+          <Stack.Screen name="AddProduct" component={AddProductScreen} /> */}
         </Stack.Navigator>
       </NavigationContainer>
 

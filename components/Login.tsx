@@ -1,8 +1,8 @@
 import React, { useState, useEffect, FormEvent, ChangeEvent } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { LoginUser, reset } from "../features/authSlice";
-import { RootState } from "../store"; // Import RootState from your store setup
+import { LoginUser, reset } from "../redux/authSlice";
+import { RootState } from "../redux/store"; // Import RootState from your store setup
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
