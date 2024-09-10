@@ -30,7 +30,6 @@ export default function App(): JSX.Element {
           <Stack.Screen name="Dashboard" component={Dashboard} />
           <Stack.Screen name="Product" component={ProductScreen} />
           <Stack.Screen name="AddProduct" component={AddProductScreen} />
-          <Sta
         </Stack.Navigator>
       </NavigationContainer>
 
